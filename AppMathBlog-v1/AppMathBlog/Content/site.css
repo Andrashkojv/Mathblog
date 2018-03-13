@@ -1,0 +1,19 @@
+﻿.navbar{
+    border-radius:0!important;
+}
+.main-content{
+   min-height:calc(100vh - 50px);
+   padding-bottom:20px;
+}
+.footer{
+    height:50px;
+    background-color:black;
+    color:white;
+    padding:15px;
+}
+.media-object{
+    max-width:64px;
+}
+.btn-file{
+    line-height:20px!important;
+}

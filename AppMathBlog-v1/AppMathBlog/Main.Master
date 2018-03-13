@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="AppMathBlog.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <%: System.Web.Optimization.Styles.Render("~/Content/css") %>
+    <%: System.Web.Optimization.Scripts.Render("~/bundles/jquery") %>
+    <%: System.Web.Optimization.Scripts.Render("~/bundles/bootstrap") %>    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">         
+        <div class="main-content">
+             <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">MathBlog</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">       
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Приклади <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/Examples/ServerControls.aspx">Базові приклади</a></li>
+                        <li><a href="/Examples/Validation.aspx">Приклади валідації</a></li>
+                        <li><a href="/Examples/Files.aspx">Приклади завантаження файлів</a></li>
+                      </ul>
+                    </li>    
+                    <li><a href="/Blog/Index.aspx">Список блогів</a></li> 
+                  </ul>    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><p class="navbar-btn"><a class="btn btn-primary" href="/Blog/Create.aspx">Створити блог</a></p></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+
+            <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        </div>       
+    </form>
+
+    <footer class="footer">
+        <div class="container">
+            2018 - MathBlog.
+        </div>        
+    </footer>
+</body>
+</html>
